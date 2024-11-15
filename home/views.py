@@ -1,13 +1,7 @@
 from django.shortcuts import render
-
 # Create your views here.
-from django.shortcuts import render
-
-
+context = {
+    'text': 'Hello, Bia Linda!'
+}
 def home(request):
-    print('home')
-
-    return render(
-        request,
-        'home/index.html'
-    )
+    return render(request, 'home/index.html', context)
